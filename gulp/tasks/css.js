@@ -3,13 +3,14 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     nesting = require('postcss-nested'),
     mixins = require('postcss-mixins'),
+    math = require('postcss-calc'),
     postImport = require('postcss-import'),
     cssVars = require('postcss-simple-vars');
 
 gulp.task('css', function () {
     console.log('---> Filtering CSS file...');
     return gulp.src('./app/assets/css/styles.css')
-        .pipe(postCSS([postImport, cssVars, mixins, nesting, autoprefixer]))
+        .pipe(postCSS([postImport, cssVars, mixins, nesting, math, autoprefixer]))
         .on('error', function (err) {
             console.log('There seems to be an error with your CSS.');
             console.log(err.toString());
