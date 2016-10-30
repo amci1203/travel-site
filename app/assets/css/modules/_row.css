@@ -2,9 +2,11 @@
     @mixin clearfix;
     &--gutters {
         margin-right: calc($gutter-width * -1);
-    }
-    &--gutters > div {
-        padding-right: $gutter-width;
+        & > div { padding-right: $gutter-width }
+        &--large {
+            margin-right: calc((1.5 * $gutter-width) * -1);
+            & > div { padding-right: calc(1.5 * $gutter-width) }
+        }
     }
     &__b-margin-until-md {
         margin-bottom: 1rem;
