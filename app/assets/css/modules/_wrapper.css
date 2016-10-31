@@ -20,4 +20,20 @@
             margin-bottom: 3.875rem;
         }
     }
+    &--fluid-sm {
+        padding-left: 0;
+        padding-right: 0;
+        @mixin atMedium {
+            padding-left: $wrapper-padding;
+            padding-right: $wrapper-padding;
+        }
+    }
+    &--fluid-md {
+        padding-left: 0;
+        padding-right: 0;
+        @mixin atLarge {
+            padding-left: $wrapper-padding;
+            padding-right: $wrapper-padding;
+        }
+    }
 }
