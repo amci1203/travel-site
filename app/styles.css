@@ -1220,6 +1220,28 @@ a {
   }
 }
 
+.footer {
+    background-color: #2f5572;
+    color: #FFF;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.footer__text {
+  font-weight: 200;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+
+  .footer__text {
+    display: inline;
+    margin-bottom: 0;
+    margin-right: 1.4rem;
+  }
+}
+
 .headline {
     font-size: 1.275rem;
     font-weight: 300;
