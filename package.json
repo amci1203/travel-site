@@ -4,7 +4,8 @@
   "main": "index.js",
   "dependencies": {
     "jquery": "^2.2.3",
-    "normalize.css": "^4.2.0"
+    "normalize.css": "^4.2.0",
+    "waypoints": "^4.0.1"
   },
   "repository": {
     "type": "git",
