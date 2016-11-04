@@ -1238,10 +1238,6 @@ a {
     transition: background-color 0.3s ease-out;
 }
 
-.header--menu-open {
-  background-color: rgba(47,85,114, 0.5);
-}
-
 @media (min-width: 768px) {
 
   .header {
@@ -1252,6 +1248,10 @@ a {
   .header--dark {
     background-color: rgba(23, 51, 72, 0.85);
   }
+}
+
+.header--menu-open {
+  background-color: rgba(47,85,114, 0.5);
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -1567,6 +1567,10 @@ a {
     font-size: 1rem;
     padding: 12px 0;
     background-color: transparent;
+  }
+
+  .primary-nav a.current-link {
+    color: #FABB69;
   }
 }
 

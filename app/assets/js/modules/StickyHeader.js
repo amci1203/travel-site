@@ -5,9 +5,9 @@ class StickyHeader {
     constructor () {
         this.header = $('.header');
         this.triggerElement = $('.large-hero__title');
-        this.setHeaderOffset();
+        this.setHeaderWaypoint();
     }
-    setHeaderOffset() {
+    setHeaderWaypoint() {
         let head = this;
         new Waypoint({
             element: head.triggerElement[0],

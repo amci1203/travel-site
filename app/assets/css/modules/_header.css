@@ -4,9 +4,6 @@
     width: 100%;
     padding: 10px 0;
     transition: background-color 0.3s ease-out;
-    &--menu-open {
-        background-color: rgba($mainBlue, 0.5);
-    }
     @mixin atMedium {
         background-color: rgba($mainBlue, 0.3);
         position: fixed;
@@ -14,15 +11,18 @@
             background-color: rgba(23, 51, 72, 0.85);
         }
     }
+    &--menu-open {
+        background-color: rgba($mainBlue, 0.5);
+    }
     ///////////////////////////////////////////////////////////////////////////
     &__menu-icon {
+        @mixin atMedium { display: none }
         position: absolute;
         z-index: 300;
         top: 10px;
         right: 10px;
         width: 20px;
         height: 20px;
-        @mixin atMedium { display: none }
         &::before {
             content: "";
             position: absolute;

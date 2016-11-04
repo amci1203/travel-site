@@ -37,6 +37,9 @@
             font-size: 1rem;
             padding: 12px 0;
             background-color: transparent;
+            &.current-link {
+                color: #FABB69;
+            }
         }
 
     }
