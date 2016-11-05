@@ -1,8 +1,11 @@
 module.exports = {
-    entry: './app/assets/js/app.js',
+    entry: {
+        app: './app/assets/js/app.js',
+        vendor: './app/assets/js/vendor.js'
+    },
     output: {
         path: './app/temp/scripts',
-        filename: 'app.js',
+        filename: '[name].js',
     },
     module: {
         loaders: [
