@@ -58,7 +58,11 @@
 
 	var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
-	var _ScrollSpy = __webpack_require__(6);
+	var _Modal = __webpack_require__(6);
+
+	var _Modal2 = _interopRequireDefault(_Modal);
+
+	var _ScrollSpy = __webpack_require__(7);
 
 	var _ScrollSpy2 = _interopRequireDefault(_ScrollSpy);
 
@@ -70,6 +74,7 @@
 	var testimonials = new _RevealOnScroll2.default('.testimonial', '60%');
 	var header = new _StickyHeader2.default();
 	var nav = new _ScrollSpy2.default();
+	var modal = new _Modal2.default('myModal');
 
 /***/ },
 /* 1 */
@@ -10860,7 +10865,71 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _jquerySmoothScroll = __webpack_require__(7);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Modal = function () {
+	    function Modal(modalName) {
+	        _classCallCheck(this, Modal);
+
+	        this.modal = (0, _jquery2.default)('#' + modalName);
+	        this.closeTrigger = (0, _jquery2.default)('.' + modalName + '--close');
+	        this.openTrigger = (0, _jquery2.default)('.' + modalName + '--open');
+	        this.events();
+	    }
+
+	    _createClass(Modal, [{
+	        key: 'events',
+	        value: function events() {
+	            // click openModal buttons
+	            this.openTrigger.click(this.openModal.bind(this));
+	            // click closeModal buttons
+	            this.closeTrigger.click(this.closeModal.bind(this));
+	            //press any key to close
+	            (0, _jquery2.default)(document).keyup(this.keyPress.bind(this));
+	        }
+	    }, {
+	        key: 'openModal',
+	        value: function openModal() {
+	            this.modal.addClass('modal--open');
+	            return false;
+	        }
+	    }, {
+	        key: 'closeModal',
+	        value: function closeModal() {
+	            this.modal.removeClass('modal--open');
+	            return false;
+	        }
+	    }, {
+	        key: 'keyPress',
+	        value: function keyPress(key) {
+	            if (key.keyCode === 27) this.closeModal();
+	        }
+	    }]);
+
+	    return Modal;
+	}();
+
+	exports.default = Modal;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _jquery = __webpack_require__(2);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _jquerySmoothScroll = __webpack_require__(8);
 
 	var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -10919,7 +10988,7 @@
 	exports.default = ScrollSpy;
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

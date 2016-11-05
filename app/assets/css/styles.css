@@ -8,6 +8,7 @@
 @import 'modules/_section-title';
 @import 'modules/_btn';
 @import 'modules/_icon';
+@import 'modules/_social-icons';
 @import 'modules/_page-section';
 @import 'modules/_header';
 @import 'modules/_footer';
@@ -17,3 +18,4 @@
 @import 'modules/_testimonial';
 @import 'modules/_generic-content-container';
 @import 'modules/_reveal-item';
+@import 'modules/_modal';

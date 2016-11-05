@@ -19,7 +19,7 @@
           </div>
           <div class="header__menu-content">
               <div class="header__btn-container">
-                  <a href="#" class='btn'>Get in Touch</a>
+                  <a href="#" class='btn myModal--open'>Get in Touch</a>
               </div>
               <nav class='primary-nav primary-nav--right'>
                   <ul>
@@ -157,9 +157,26 @@
 
   <footer class='footer'>
     <div class="wrapper">
-        <p><span class="footer__text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span> <a href="#" class='btn btn--orange'>Get in Touch</a></p>
+        <p><span class="footer__text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span> <a href="#" class='btn btn--orange myModal--open'>Get in Touch</a></p>
     </div>
   </footer>
+  
+  <div class="modal" id='myModal'>
+    <span class='myModal--close'>X</span>
+    <div class="wrapper modal__body">
+        <h2 class='section-title section-title--less-margin section-title--blue'><span class='section-title__icon icon icon--mail'></span>Real <strong>Testimonials</strong></h2>
+        <div class="wrapper wrapper--narrow">
+            <p class="modal__body__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms below !</p>
+        </div>
+        <div class='social-icons'>
+            <a href="" class="social-icons__icon"><span class="icon icon--facebook"></span></a>
+            <a href="" class="social-icons__icon"><span class="icon icon--twitter"></span></a>
+            <a href="" class="social-icons__icon"><span class="icon icon--instagram"></span></a>
+            <a href="" class="social-icons__icon"><span class="icon icon--youtube"></span></a>
+        </div>
+    </div>
+  </div>
+  
   <script src='temp/scripts/app.js'></script>
 </body>
 </html>

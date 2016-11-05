@@ -453,6 +453,10 @@ a {
   max-width: 1027px;
 }
 
+.wrapper--narrow {
+  max-width: 470px;
+}
+
 .wrapper--b-margin {
   margin-bottom: 1rem;
 }
@@ -1023,7 +1027,7 @@ a {
   }
 }
 
-.section-title {
+.section-title {;
     text-align: center;
     font-size: 2.55rem;
     font-weight: 300;
@@ -1032,6 +1036,11 @@ a {
 
 .section-title--blue {
   color: #2f5572
+}
+
+.section-title--less-margin {
+  margin-top: 0;
+  margin-bottom: 0.3rem !important
 }
 
 @media (min-width: 480px) {
@@ -1185,6 +1194,36 @@ a {
         height: 42px;
         background-position: 36.69752421959096% 45.792307692307695%;
     }
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons__icon {
+  position: relative;
+  background-color: #d59541;
+  display: inline-block;
+  margin: 5px 5px;
+  height: 72px;
+  width: 33%;
+}
+
+@media (min-width: 480px) {
+
+  .social-icons__icon {
+    margin: 0 5px;
+    width: 72px;
+  }
+}
+
+.social-icons__icon .icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%)
+}
 
 .page-section {
     padding: 4.5rem 0;
@@ -1696,4 +1735,60 @@ a {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    z-index: 9000;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255, 0.95);
+}
+
+.modal--open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #2f5572;
+  font-size: 2rem;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.modal__close-button:hover {
+  color: #d59541;
+  cursor: pointer;
+}
+
+.modal__body {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal__body__description {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.65;
 }

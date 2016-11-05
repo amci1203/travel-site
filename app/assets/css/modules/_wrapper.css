@@ -8,6 +8,9 @@
     &--medium {
         max-width: calc(991px + ($wrapper-padding * 2));
     }
+    &--narrow {
+        max-width: 470px;
+    }
     &--b-margin {
         margin-bottom: 1rem;
         @mixin atSmall {
