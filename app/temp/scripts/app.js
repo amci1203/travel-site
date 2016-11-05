@@ -10874,20 +10874,17 @@
 	        _classCallCheck(this, Modal);
 
 	        this.modal = (0, _jquery2.default)('#' + modalName);
-	        this.closeTrigger = (0, _jquery2.default)('.' + modalName + '--close');
 	        this.openTrigger = (0, _jquery2.default)('.' + modalName + '--open');
+	        this.closeTrigger = (0, _jquery2.default)('.' + modalName + '--close');
 	        this.events();
 	    }
 
 	    _createClass(Modal, [{
 	        key: 'events',
 	        value: function events() {
-	            // click openModal buttons
 	            this.openTrigger.click(this.openModal.bind(this));
-	            // click closeModal buttons
 	            this.closeTrigger.click(this.closeModal.bind(this));
-	            //press any key to close
-	            (0, _jquery2.default)(document).keyup(this.keyPress.bind(this));
+	            (0, _jquery2.default)(document).keyup(this.handleKeyPress.bind(this));
 	        }
 	    }, {
 	        key: 'openModal',
@@ -10902,9 +10899,9 @@
 	            return false;
 	        }
 	    }, {
-	        key: 'keyPress',
-	        value: function keyPress(key) {
-	            if (key.keyCode === 27) this.closeModal();
+	        key: 'handleKeyPress',
+	        value: function handleKeyPress(key) {
+	            if (key.keyCode === 27) this.modal.removeClass('modal--open');
 	        }
 	    }]);
 
