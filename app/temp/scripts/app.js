@@ -10942,12 +10942,21 @@
 	        this.links = (0, _jquery2.default)('.primary-nav a');
 	        this.createSectionWaypoints();
 	        this.addSmoothScrolling();
+	        this.lazyImages = (0, _jquery2.default)('.lazyload');
+	        this.refreshWaypoints();
 	    }
 
 	    _createClass(ScrollSpy, [{
 	        key: 'addSmoothScrolling',
 	        value: function addSmoothScrolling() {
 	            this.links.smoothScroll();
+	        }
+	    }, {
+	        key: 'refreshWaypoints',
+	        value: function refreshWaypoints() {
+	            this.lazyImages.load(function () {
+	                Waypoint.refreshAll();
+	            });
 	        }
 	    }, {
 	        key: 'createSectionWaypoints',
