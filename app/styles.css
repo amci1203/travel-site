@@ -1200,19 +1200,19 @@ a {
 }
 
 .social-icons__icon {
-  position: relative;
+  position : relative;
   background-color: #d59541;
   display: inline-block;
-  margin: 5px 5px;
-  height: 72px;
+  margin: 0 5px 5px 5px;
   width: 33%;
+  height: 72px;
 }
 
 @media (min-width: 480px) {
 
   .social-icons__icon {
-    margin: 0 5px;
     width: 72px;
+    margin: 0 5px;
   }
 }
 
@@ -1222,7 +1222,7 @@ a {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%)
+          transform: translate(-50%, -50%);
 }
 
 .page-section {
@@ -1293,8 +1293,7 @@ a {
   background-color: rgba(47,85,114, 0.5);
 }
 
-///////////////////////////////////////////////////////////////////////////
-    .header__menu-icon {
+.header__menu-icon {
   position: absolute;
   z-index: 300;
   top: 10px;
@@ -1305,14 +1304,12 @@ a {
 
 @media (min-width: 768px) {
 
-  ///////////////////////////////////////////////////////////////////////////
-    .header__menu-icon {
+  .header__menu-icon {
     display: none;
   }
 }
 
-///////////////////////////////////////////////////////////////////////////
-    .header__menu-icon::before {
+s        .header__menu-icon::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1326,8 +1323,7 @@ a {
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-///////////////////////////////////////////////////////////////////////////
-    .header__menu-icon__middle {
+.header__menu-icon__middle {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%) scaleX(1);
@@ -1341,8 +1337,7 @@ a {
   transition: all 0.3s ease-out;
 }
 
-///////////////////////////////////////////////////////////////////////////
-    .header__menu-icon::after {
+.header__menu-icon::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1356,16 +1351,14 @@ a {
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-///////////////////////////////////////////////////////////////////////////
-    .header__menu-icon--close-x::before {
+.header__menu-icon--close-x::before {
   -webkit-transform: rotate(45deg) scaleX(1.25);
           transform: rotate(45deg) scaleX(1.25);
   -webkit-transform-origin: top left;
           transform-origin: top left;
 }
 
-///////////////////////////////////////////////////////////////////////////
-    .header__menu-icon--close-x .header__menu-icon__middle {
+.header__menu-icon--close-x .header__menu-icon__middle {
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   opacity: 0;
@@ -1373,8 +1366,7 @@ a {
           transform-origin: left;
 }
 
-///////////////////////////////////////////////////////////////////////////
-    .header__menu-icon--close-x::after {
+.header__menu-icon--close-x::after {
   -webkit-transform: rotate(-45deg) scaleX(1.25);
           transform: rotate(-45deg) scaleX(1.25);
   -webkit-transform-origin: bottom left;
@@ -1738,57 +1730,54 @@ a {
 }
 
 .modal {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
     opacity: 0;
     visibility: hidden;
+    z-index: 0;
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
-    z-index: 9000;
-    -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(255,255,255, 0.95);
 }
 
 .modal--open {
   opacity: 1;
   visibility: visible;
+  z-index: 9000;
   -webkit-transform: scale(1);
-          transform: scale(1);
+          transform: scale(1)
 }
 
 .modal__close-button {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  color: #2f5572;
-  font-size: 2rem;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
   -webkit-transform-origin: top right;
           transform-origin: top right;
   -webkit-transform: scaleX(1.2);
           transform: scaleX(1.2);
+  cursor: pointer;
+  color: #2f5572;
 }
 
 .modal__close-button:hover {
-  color: #d59541;
-  cursor: pointer;
+  color: #d59541
 }
 
 .modal__body {
+  font-size: 1.3rem;
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.modal__body__description {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 300;
-  line-height: 1.65;
 }
