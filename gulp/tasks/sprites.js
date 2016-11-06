@@ -4,6 +4,9 @@ var gulp = require('gulp'),
     toPNG = require('gulp-svg2png'),
     del = require('del'),
     config = {
+        shape: { spacing: {
+          padding: 1
+        }},
         mode: { css: {
             variables: {
                changeSVG2PNG: function () {

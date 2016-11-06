@@ -316,7 +316,7 @@
         }
     }
     /* BEGIN EQUAL HEIGHT CSS RULES*/
-    &--equal-height-md {
+    .flexbox &--equal-height-md {
         @mixin atMedium {
             display: flex;
         }
@@ -325,7 +325,7 @@
             display: flex;
         }
     }
-    &--equal-height-lg {
+    .flexbox &--equal-height-lg {
         @mixin atLarge {
             display: flex;
         }
