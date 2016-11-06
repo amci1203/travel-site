@@ -7,9 +7,16 @@ class ScrollSpy {
         this.links = $('.primary-nav a');
         this.createSectionWaypoints();
         this.addSmoothScrolling();
+        this.lazyImages = $('.lazyload');
+        this.refreshWaypoints();
     }
     addSmoothScrolling () {
         this.links.smoothScroll();
+    }
+    refreshWaypoints () {
+        this.lazyImages.load(function () {
+            Waypoint.refreshAll();
+        });
     }
     createSectionWaypoints () {
         let instance = this;

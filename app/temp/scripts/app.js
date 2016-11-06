@@ -74,7 +74,7 @@
 	var testimonials = new _RevealOnScroll2.default('.testimonial', '60%');
 	var header = new _StickyHeader2.default();
 	var nav = new _ScrollSpy2.default();
-	var modal = new _Modal2.default('myMsodal');
+	var modal = new _Modal2.default('myModal');
 
 /***/ },
 /* 1 */
@@ -10881,12 +10881,21 @@
 	        this.links = (0, _jquery2.default)('.primary-nav a');
 	        this.createSectionWaypoints();
 	        this.addSmoothScrolling();
+	        this.lazyImages = (0, _jquery2.default)('.lazyload');
+	        this.refreshWaypoints();
 	    }
 
 	    _createClass(ScrollSpy, [{
 	        key: 'addSmoothScrolling',
 	        value: function addSmoothScrolling() {
 	            this.links.smoothScroll();
+	        }
+	    }, {
+	        key: 'refreshWaypoints',
+	        value: function refreshWaypoints() {
+	            this.lazyImages.load(function () {
+	                Waypoint.refreshAll();
+	            });
 	        }
 	    }, {
 	        key: 'createSectionWaypoints',
