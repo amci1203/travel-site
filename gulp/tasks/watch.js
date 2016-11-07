@@ -17,7 +17,7 @@ gulp.task('distView', function () {
     browserSync.init({
         notify: false,
         server: {
-            baseDir: 'dist'
+            baseDir: 'docs'
         }
     });
 })

@@ -9,12 +9,12 @@ var gulp = require('gulp'),
 gulp.task('build', [
     'cleanDist',
     'optimizeIMGs',
-    'optimizeStaticFiles',
+    'useminTrigger',
     'copyGeneralFiles'
 ]);
 
-gulp.task('cleanDist', function () {
-    return del(['./dist']);
+gulp.task('cleanDist', ['icons'], function () {
+    return del(['./docs']);
 })
 
 gulp.task('copyGeneralFiles', ['cleanDist'], function () {
@@ -25,20 +25,24 @@ gulp.task('copyGeneralFiles', ['cleanDist'], function () {
         '!./app/temp',
         '!./app/temp/**',
         ])
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./docs'))
 })
 
-gulp.task('optimizeIMGs', ['cleanDist', 'icons'], function () {
+gulp.task('optimizeIMGs', ['cleanDist'], function () {
     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/**/*-i.*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
     .pipe(minimizeIMG({
         pregressive: true,
         interlaced: true,
         multipass: true,
     }))
-    .pipe(gulp.dest('./dist/assets/images'))
+    .pipe(gulp.dest('./docs/assets/images'))
 })
 
-gulp.task('optimizeStaticFiles', ['cleanDist', 'css', 'scripts'], function () {
+gulp.task('useminTrigger', ['cleanDist'], function () {
+    gulp.start('optimizeStaticFiles');
+})
+
+gulp.task('optimizeStaticFiles', ['css', 'scripts'], function () {
     return gulp.src(['./app/index.html'])
         .pipe(usemin({
             css: [
@@ -58,5 +62,5 @@ gulp.task('optimizeStaticFiles', ['cleanDist', 'css', 'scripts'], function () {
                 }
             ]
         }))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./docs'))
 })
