@@ -10,7 +10,6 @@
     }
     {{/first}}
     .icon--{{base}} {
-        display: inline-block;
         width: {{width.outer}}px;
         height: {{height.outer}}px;
         background-position: {{position.relative.xy}};

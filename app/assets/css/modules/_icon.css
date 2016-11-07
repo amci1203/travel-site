@@ -7,73 +7,61 @@
         background-image: url('/assets/images/sprites/sprite-8eb89099.png');
     }
     .icon--clear-view-escapes {
-        display: inline-block;
         width: 144.4px;
         height: 61.53px;
         background-position: 0 0;
     }
     .icon--comment {
-        display: inline-block;
         width: 66px;
         height: 66px;
         background-position: 99.71014492753623% 0;
     }
     .icon--facebook {
-        display: inline-block;
         width: 23.23px;
         height: 44.01px;
         background-position: 26.424310365536293% 45.92133741323979%;
     }
     .icon--fire {
-        display: inline-block;
         width: 58px;
         height: 66px;
         background-position: 0 99.58035714285714%;
     }
     .icon--globe {
-        display: inline-block;
         width: 66px;
         height: 66px;
         background-position: 28.019323671497585% 99.58035714285714%;
     }
     .icon--instagram {
-        display: inline-block;
         width: 44.01px;
         height: 44.01px;
         background-position: 63.059522249879905% 49.25740726919919%;
     }
     .icon--mail {
-        display: inline-block;
         width: 66px;
         height: 50px;
         background-position: 0 48.0703125%;
     }
     .icon--rain {
-        display: inline-block;
         width: 66px;
         height: 66px;
         background-position: 99.71014492753623% 58.92857142857143%;
     }
     .icon--star {
-        display: inline-block;
         width: 66px;
         height: 66px;
         background-position: 59.90338164251208% 99.58035714285714%;
     }
     .icon--twitter {
-        display: inline-block;
         width: 53.78px;
         height: 44.06px;
         background-position: 94.15199343125627% 98.55159026429745%;
     }
     .icon--wifi {
-        display: inline-block;
         width: 62px;
         height: 66px;
         background-position: 68.43601895734596% 0;
     }
     .icon--youtube {
-        display: inline-block;
         width: 36.75px;
         height: 44px;
         background-position: 37.76931216931217% 45.917910447761194%;

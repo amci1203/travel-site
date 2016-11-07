@@ -13,6 +13,15 @@ gulp.task('scriptsRefresh', ['scripts'], function () {
     browserSync.reload();
 })
 
+gulp.task('distView', function () {
+    browserSync.init({
+        notify: false,
+        server: {
+            baseDir: 'dist'
+        }
+    });
+})
+
 gulp.task('watch', function () {
     browserSync.init({
         notify: false,
